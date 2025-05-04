@@ -5,7 +5,7 @@ import { getStyleFileName } from "../utils/file-utils"
 import { FileStructure } from "../../config"
 
 /**
- * Generates an index CSS file that imports all token style files and theme variations.
+ * Generates an index SCSS file that imports all token style files and theme variations.
  * This file serves as the main entry point for all token styles.
  * 
  * The function supports two file structure modes:
