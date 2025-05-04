@@ -201,7 +201,7 @@
     {
         "key": "indexFileName",
         "type": "string",
-        "default": "index.css",
+        "default": "index.scss",
         "title": "Index filename",
         "description": "The name of the index file that will be generated.",
         "category": "Index file",
