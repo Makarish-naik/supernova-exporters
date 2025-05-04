@@ -1,0 +1,20 @@
+{
+    "id": "supernovaio.exporter-scss-custom",
+    "name": "SCSS_Custom",
+    "description": "Export your design tokens into SCSS variables and definitions.",
+    "author": "Makarish Naik",
+    "organization": "Supernova.io",
+    "homepage": "https://supernova.io",
+    "version": "3.3.1",
+    "usesBrands": true,
+    "usesThemes": true,
+    "executable": "/dist/build.js",
+    "engine": "latest",
+    "tags": [
+        "SCSS",
+        "Custom",
+        "SCSS Custom",
+        "Tokens",
+        "New"
+    ]
+}
