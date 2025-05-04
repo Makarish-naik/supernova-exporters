@@ -1,0 +1,18 @@
+{
+    "id": "supernovaio.exporter-scss",
+    "name": "SCSS",
+    "description": "Export your design tokens into SCSS variables and definitions.",
+    "author": "Supernova.io",
+    "organization": "Supernova.io",
+    "homepage": "https://supernova.io",
+    "version": "3.0.0",
+    "usesBrands": true,
+    "usesThemes": true,
+    "executable": "/dist/build.js",
+    "engine": "latest",
+    "tags": [
+        "SCSS",
+        "Tokens",
+        "New"
+    ]
+}
