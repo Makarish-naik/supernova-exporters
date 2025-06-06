@@ -157,12 +157,12 @@
         "type": "enum",
         "default": "separateFiles",
         "title": "Theme export format",
-        "description": "Control how themes are exported in the CSS files.",
+        "description": "Control how themes are exported in the SCSS files.",
         "category": "Themes",
         "options": {
             "separateFiles": {
                 "label": "Separate files per theme",
-                "description": "Generate a separate CSS file for each selected theme"
+                "description": "Generate a separate SCSS file for each selected theme"
             },
             "applyDirectly": {
                 "label": "Apply themes directly",
@@ -272,31 +272,31 @@
             "customizeStyleFileNames": true
         },
         "default": {
-            "Blur": "blur.css",
-            "Border": "border.css",
-            "BorderRadius": "border-radius.css",
-            "BorderWidth": "border-width.css",
-            "Color": "color.css",
-            "Dimension": "dimension.css",
-            "Duration": "duration.css",
-            "FontFamily": "font-family.css",
-            "FontSize": "font-size.css",
-            "FontWeight": "font-weight.css",
-            "Gradient": "gradient.css",
-            "LetterSpacing": "letter-spacing.css",
-            "LineHeight": "line-height.css",
-            "Opacity": "opacity.css",
-            "ParagraphSpacing": "paragraph-spacing.css",
-            "ProductCopy": "product-copy.css",
-            "Shadow": "shadow.css",
-            "Size": "size.css",
-            "Space": "space.css",
-            "String": "string.css",
-            "TextCase": "text-case.css",
-            "TextDecoration": "text-decoration.css",
-            "Typography": "typography.css",
-            "Visibility": "visibility.css",
-            "ZIndex": "z-index.css"
+            "Blur": "blur.scss",
+            "Border": "border.scss",
+            "BorderRadius": "border-radius.scss",
+            "BorderWidth": "border-width.scss",
+            "Color": "color.scss",
+            "Dimension": "dimension.scss",
+            "Duration": "duration.scss",
+            "FontFamily": "font-family.scss",
+            "FontSize": "font-size.scss",
+            "FontWeight": "font-weight.scss",
+            "Gradient": "gradient.scss",
+            "LetterSpacing": "letter-spacing.scss",
+            "LineHeight": "line-height.scss",
+            "Opacity": "opacity.scss",
+            "ParagraphSpacing": "paragraph-spacing.scss",
+            "ProductCopy": "product-copy.scss",
+            "Shadow": "shadow.scss",
+            "Size": "size.scss",
+            "Space": "space.scss",
+            "String": "string.scss",
+            "TextCase": "text-case.scss",
+            "TextDecoration": "text-decoration.scss",
+            "Typography": "typography.scss",
+            "Visibility": "visibility.scss",
+            "ZIndex": "z-index.scss"
         },
         "allowedKeys": {
             "options": [
@@ -419,20 +419,20 @@
         }
     },
     {
-        "key": "cssSelector",
+        "key": "scssSelector",
         "type": "string",
         "default": "",
-        "title": "CSS selector",
-        "description": "CSS selector for base token variables (e.g. ':root' for global scope).",
-        "category": "CSS selectors"
+        "title": "SCSS selector",
+        "description": "SCSS selector for base token variables (e.g. ':root' for global scope).",
+        "category": "SCSS selectors"
     },
     {
         "key": "themeSelector",
         "type": "string",
         "default": ".theme-{theme}",
-        "title": "CSS selector for themes",
-        "description": "CSS selector for theme files. Use {theme} placeholder to insert theme name.",
-        "category": "CSS selectors"
+        "title": "SCSS selector for themes",
+        "description": "SCSS selector for theme files. Use {theme} placeholder to insert theme name.",
+        "category": "SCSS selectors"
     },
     {
         "key": "showDescriptions",
@@ -466,7 +466,7 @@
         "type": "number",
         "default": 2,
         "title": "Indentation",
-        "description": "Number of spaces used to indent CSS variables.",
+        "description": "Number of spaces used to indent SCSS variables.",
         "category": "Other"
     },
     {
@@ -480,7 +480,7 @@
     {
         "key": "propertyToWriteNameTo",
         "type": "string",
-        "default": "CSS",
+        "default": "SCSS",
         "title": "Custom property name",
         "description": "Name of the custom property where generated variable names will be saved.",
         "category": "Automatic write-back",

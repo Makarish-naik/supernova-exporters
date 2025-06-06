@@ -16,14 +16,14 @@ export function getTokenPrefix(tokenType: TokenType): string {
 }
 
 /**
- * Converts a design token into its CSS custom property representation.
+ * Converts a design token into its SCSS custom property representation.
  * Handles formatting of the token value, references, and optional description comments.
  *
  * @param token - The design token to convert
  * @param mappedTokens - Map of all tokens for resolving references
  * @param tokenGroups - Array of token groups for determining token hierarchy
  * @param collections - Array of collections for resolving collection names
- * @returns Formatted CSS custom property string with optional description comment
+ * @returns Formatted SCSS custom property string with optional description comment
  */
 export function convertedToken(
   token: Token,
@@ -31,17 +31,17 @@ export function convertedToken(
   tokenGroups: Array<TokenGroup>,
   collections: Array<DesignSystemCollection> = []
 ): string {
-  // Generate the CSS variable name based on token properties and configuration
+  // Generate the SCSS variable name based on token properties and configuration
   const name = tokenVariableName(token, tokenGroups, collections)
 
-  // Convert token value to CSS, handling references and formatting according to configuration
+  // Convert token value to SCSS, handling references and formatting according to configuration
   const value = CSSHelper.tokenToCSS(token, mappedTokens, {
     allowReferences: exportConfiguration.useReferences,
     decimals: exportConfiguration.colorPrecision,
     colorFormat: exportConfiguration.colorFormat,
     forceRemUnit: exportConfiguration.forceRemUnit,
     remBase: exportConfiguration.remBase,
-    // Custom handler for token references - converts them to CSS var() syntax
+    // Custom handler for token references - converts them to SCSS var() syntax
     tokenToVariableRef: (t) => {
       return `$${tokenVariableName(t, tokenGroups, collections)}`
     },

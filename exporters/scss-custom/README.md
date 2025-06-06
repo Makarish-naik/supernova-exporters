@@ -116,9 +116,9 @@ Here is a list of all the configuration options this exporter provides:
 
 ### Themes
 
-- **exportThemesAs:** Control how themes are exported in the CSS files:
+- **exportThemesAs:** Control how themes are exported in the SCSS files:
 
-  - `separateFiles`: Generate a separate CSS file for each selected theme
+  - `separateFiles`: Generate a separate SCSS file for each selected theme
   - `applyDirectly`: Apply selected themes directly to token values
   - `mergedTheme`: Generate theme variables with all themes applied together
 
@@ -162,7 +162,7 @@ Here is a list of all the configuration options this exporter provides:
 
 - **disclaimer:** A message explaining that the file was automatically generated will appear in all style files (requires showGeneratedFileDisclaimer: true).
 
-- **indent:** Number of spaces used to indent CSS variables.
+- **indent:** Number of spaces used to indent SCSS variables.
 
 ### Automatic write-back
 

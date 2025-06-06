@@ -26,7 +26,7 @@ export type ExporterConfiguration = {
   showGeneratedFileDisclaimer: boolean
   /** When enabled, a disclaimer showing the fact that the file was generated automatically and should not be changed manually will appear in all style styles */
   disclaimer: string
-  /** When enabled, file with all css style files imported will be generated */
+  /** When enabled, file with all scss style files imported will be generated */
   generateIndexFile: boolean
   /** When enabled, empty style files will be generated. Otherwise empty are omitted */
   generateEmptyFiles: boolean
@@ -40,7 +40,7 @@ export type ExporterConfiguration = {
   colorFormat: ColorFormat
   /** Max number of decimals in colors */
   colorPrecision: number
-  /** Number of spaces used to indent every css variables */
+  /** Number of spaces used to indent every scss variables */
   indent: number
   /** When set, will prefix each token of a specific type with provided identifier. Put empty string if not necessary */
   tokenPrefixes: Record<TokenType, string>
@@ -52,11 +52,11 @@ export type ExporterConfiguration = {
   baseStyleFilePath: string
   /** Index file will be written to this directory (relative to export root set by the exporter / pipeline configuration / VSCode extension) */
   baseIndexFilePath: string
-  /** CSS selector where variables will be defined */
+  /** SCSS selector where variables will be defined */
   cssSelector: string
-  /** CSS selector pattern for themes, {theme} will be replaced with theme name */
+  /** SCSS selector pattern for themes, {theme} will be replaced with theme name */
   themeSelector: string
-  /** Controls how themes are exported in the CSS files */
+  /** Controls how themes are exported in the SCSS files */
   exportThemesAs: ThemeExportStyle
   /** When enabled, themed files will only include tokens that have different values from the base theme */
   exportOnlyThemedTokens: boolean

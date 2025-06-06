@@ -40,7 +40,7 @@ export function generateStyleFiles(
 }
 
 /**
- * Generates a CSS output file for a specific token type, handling both base tokens and themed tokens
+ * Generates a SCSS output file for a specific token type, handling both base tokens and themed tokens
  * @param type - The type of tokens to generate styles for (colors, typography, etc.)
  * @param tokens - Array of all available tokens
  * @param tokenGroups - Array of token groups for reference
@@ -82,15 +82,15 @@ export function styleOutputFile(
 
   // Create a map of all tokens by ID for reference resolution
   const mappedTokens = new Map(tokens.map((token) => [token.id, token]))
-  // Convert tokens to CSS variable declarations
+  // Convert tokens to SCSS variable declarations
   const cssVariables = tokensOfType.map((token) => convertedToken(token, mappedTokens, tokenGroups, tokenCollections)).join("\n")
 
-  // Determine the CSS selector based on whether this is a theme file
+  // Determine the SCSS selector based on whether this is a theme file
   const selector = themePath 
     ? exportConfiguration.themeSelector.replace('{theme}', themePath)
     : exportConfiguration.cssSelector
   
-  // Construct the file content with CSS variables wrapped in selector
+  // Construct the file content with SCSS variables wrapped in selector
   let content = selector ? `${selector} {\n${cssVariables}\n}` : cssVariables
   
   // Optionally add generated file disclaimer
@@ -122,7 +122,7 @@ export function styleOutputFile(
 }
 
 /**
- * Generates a single CSS file containing all token types
+ * Generates a single SCSS file containing all token types
  */
 function generateCombinedStyleFile(
   tokens: Array<Token>,
@@ -151,12 +151,12 @@ function generateCombinedStyleFile(
   // Create a map of all tokens by ID for reference resolution
   const mappedTokens = new Map(tokens.map((token) => [token.id, token]))
   
-  // Convert all tokens to CSS variable declarations
+  // Convert all tokens to SCSS variable declarations
   const cssVariables = processedTokens
     .map((token) => convertedToken(token, mappedTokens, tokenGroups, tokenCollections))
     .join("\n")
 
-  // Determine the CSS selector based on whether this is a theme file
+  // Determine the SCSS selector based on whether this is a theme file
   const selector = themePath 
     ? exportConfiguration.themeSelector.replace('{theme}', themePath)
     : exportConfiguration.cssSelector

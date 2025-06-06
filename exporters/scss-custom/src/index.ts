@@ -18,7 +18,7 @@ function processOutputFiles(files: Array<AnyOutputFile | null>): Array<AnyOutput
 }
 
 /**
- * Main export function that generates CSS files from design tokens
+ * Main export function that generates SCSS files from design tokens
  *
  * This function handles:
  * - Fetching tokens and token groups from the design system
